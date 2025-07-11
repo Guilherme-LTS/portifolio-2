@@ -17,40 +17,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Navbar.css */
-.navbar-lateral {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 200px;
-  height: 100vh;
-  background: #222;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 40px;
-}
-
-.navbar-lateral ul {
-  list-style: none;
-  padding: 0;
-}
-
-.navbar-lateral li {
-  margin: 20px 0;
-}
-
-.navbar-lateral a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  transition: color 0.2s;
-}
-
-.navbar-lateral a:hover {
-  color: #00bfff;
-}
 
 .home-content {
   display: flex;
@@ -58,6 +24,7 @@ html {
   justify-content: flex-start;
   gap: 280px;
   margin-top: 40px;
+  margin-left: 60px;
 }
 
 .home-content > * {
