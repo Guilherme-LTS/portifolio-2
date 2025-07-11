@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import ProfileCard from './components/ProfileCard';
+import Typewriter from './components/Typewriter';
 import './App.css';
 
 function App() {
@@ -22,11 +23,15 @@ function App() {
               onContactClick={() => console.log('Contact clicked')}
               iconUrl="/images/iconpattern.png"
             />
-            <div className="home-text">
-              <h1>Bem-vindo ao meu portfólio!</h1>
-              <p>
-                Sou apaixonado por tecnologia, desenvolvimento web e sempre em busca de novos desafios. Aqui você vai encontrar meus principais projetos, experiências e formas de contato.
+            <div className="home-text">  
+              <div>
+                <Typewriter texts={['Full Stack?', 'No Code?', 'Low Code?']} />
+              </div>
+              <p className="description-text-primary">
+                Pode contar comigo
               </p>
+              <p className="description-text-secondary">
+              Transformo ideias em experiências digitais unindo código, design e criatividade. Com domínio em React, Node.js e Python, desenvolvo soluções completas, do back-end ao front. </p>
             </div>
           </div>
         </section>

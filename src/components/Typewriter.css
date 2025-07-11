@@ -1,0 +1,49 @@
+.typewriter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.typewriter-line {
+  font-family: 'Orbitron', 'Poppins', Arial, sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: left;
+}
+
+.skills-text {
+  font-family: 'Orbitron', 'Poppins', Arial, sans-serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: left;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .typewriter-line {
+    font-size: 2.5rem;
+  }
+  .skills-text {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .typewriter-line {
+    font-size: 2rem;
+  }
+  .skills-text {
+    font-size: 2rem;
+  }
+} 
