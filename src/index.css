@@ -21,3 +21,93 @@ h1, h2, h3, .text-rotate {
   font-family: 'Orbitron', 'Poppins', Arial, sans-serif;
   letter-spacing: 1px;
 }
+
+body.theme-light {
+  --background-main: #f7fafc;
+  --background-secondary: #e9f1fa;
+  --background-card: #fff;
+  --background-hover: #e0eafc;
+  --text-main: #181818;
+  --text-secondary: #3a3a3a;
+  --text-muted: #7a7a7a;
+  --border-main: #dbeafe;
+  --border-strong: #4facfe;
+  --shadow-main: 0 4px 24px 0 #4facfe22;
+  --accent: #4facfe;
+  --accent-gradient: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  background: var(--background-main);
+  color: var(--text-main);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.theme-light a {
+  color: var(--accent);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+body.theme-light a:hover {
+  color: #00bfff;
+}
+
+body.theme-light h1, body.theme-light h2, body.theme-light h3, body.theme-light h4, body.theme-light h5, body.theme-light h6,
+body.theme-light p,
+body.theme-light .card,
+body.theme-light .project-card,
+body.theme-light .profile-card,
+body.theme-light .navbar-menu a {
+  color: #181818 !important;
+}
+
+body.theme-light .profile-card__subtitle {
+  color: #4facfe;
+}
+
+body.theme-light .card, body.theme-light .project-card {
+  background: var(--background-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-main);
+  box-shadow: var(--shadow-main);
+  border-radius: 16px;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+body.theme-light .card:hover, body.theme-light .project-card:hover {
+  background: var(--background-hover);
+  box-shadow: 0 8px 32px 0 #4facfe33;
+}
+
+body.theme-light button, body.theme-light .btn {
+  background: var(--accent-gradient);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px 0 #4facfe22;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+body.theme-light button:hover, body.theme-light .btn:hover {
+  background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px 0 #4facfe33;
+}
+
+body.theme-light input, body.theme-light textarea, body.theme-light select {
+  background: #fff;
+  color: var(--text-main);
+  border: 1px solid var(--border-main);
+  border-radius: 6px;
+  box-shadow: none;
+  transition: border 0.2s, background 0.2s;
+}
+body.theme-light input:focus, body.theme-light textarea:focus, body.theme-light select:focus {
+  border: 1.5px solid var(--border-strong);
+  outline: none;
+}
+
+body.theme-light hr {
+  border-color: var(--border-main);
+}
+
+body.theme-light ::selection {
+  background: #c2e9fb;
+  color: var(--text-main);
+}

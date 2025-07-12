@@ -1,7 +1,8 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
+import React from "react";
 import "./GooeyNav.css";
 
-const GooeyNav = ({
+const GooeyNav = React.memo(({
   items,
   animationTime = 600,
   particleCount = 15,
@@ -38,7 +39,7 @@ const GooeyNav = ({
     };
   };
 
-  const makeParticles = (element) => {
+  const makeParticles = useCallback((element) => {
     const d = particleDistances;
     const r = particleR;
     const bubbleTime = animationTime * 2 + timeVariance;
@@ -80,9 +81,9 @@ const GooeyNav = ({
         }, t);
       }, 30);
     }
-  };
+  }, [animationTime, particleCount, particleDistances, particleR, timeVariance, colors]);
 
-  const updateEffectPosition = (element) => {
+  const updateEffectPosition = useCallback((element) => {
     if (!containerRef.current || !filterRef.current || !textRef.current)
       return;
     const containerRect = containerRef.current.getBoundingClientRect();
@@ -97,9 +98,21 @@ const GooeyNav = ({
     Object.assign(filterRef.current.style, styles);
     Object.assign(textRef.current.style, styles);
     textRef.current.innerText = element.innerText;
-  };
 
-  const handleClick = (e, index) => {
+    // Copiar estilos de texto do link ativo para o efeito visual
+    const link = element.querySelector('a');
+    if (link) {
+      const computed = window.getComputedStyle(link);
+      textRef.current.style.fontFamily = computed.fontFamily;
+      textRef.current.style.fontSize = computed.fontSize;
+      textRef.current.style.fontWeight = computed.fontWeight;
+      textRef.current.style.letterSpacing = computed.letterSpacing;
+      textRef.current.style.textShadow = computed.textShadow;
+      textRef.current.style.textTransform = computed.textTransform;
+    }
+  }, []);
+
+  const handleClick = useCallback((e, index) => {
     const liEl = e.currentTarget;
     if (activeIndex === index) return;
 
@@ -113,7 +126,6 @@ const GooeyNav = ({
 
     if (textRef.current) {
       textRef.current.classList.remove("active");
-
       void textRef.current.offsetWidth;
       textRef.current.classList.add("active");
     }
@@ -121,9 +133,9 @@ const GooeyNav = ({
     if (filterRef.current) {
       makeParticles(filterRef.current);
     }
-  };
+  }, [activeIndex, makeParticles, updateEffectPosition]);
 
-  const handleKeyDown = (e, index) => {
+  const handleKeyDown = useCallback((e, index) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
       const liEl = e.currentTarget.parentElement;
@@ -131,7 +143,7 @@ const GooeyNav = ({
         handleClick({ currentTarget: liEl }, index);
       }
     }
-  };
+  }, [handleClick]);
 
   useEffect(() => {
     if (!navRef.current || !containerRef.current) return;
@@ -151,7 +163,7 @@ const GooeyNav = ({
 
     resizeObserver.observe(containerRef.current);
     return () => resizeObserver.disconnect();
-  }, [activeIndex]);
+  }, [activeIndex, updateEffectPosition]);
 
   return (
     <div className="gooey-nav-container" ref={containerRef}>
@@ -177,6 +189,6 @@ const GooeyNav = ({
       <span className="effect text" ref={textRef} />
     </div>
   );
-};
+});
 
 export default GooeyNav;

@@ -4,7 +4,7 @@
 }
 
 main {
-  margin-left: 200px; /* largura da navbar */
+  margin-left: 250px; /* largura da navbar */
   padding: 40px;
   width: 100%;
 }
@@ -22,7 +22,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 280px;
+  gap: 230px;
   margin-top: 40px;
   margin-left: 60px;
 }

@@ -46,4 +46,12 @@
   .skills-text {
     font-size: 2rem;
   }
+}
+
+body.theme-light .typewriter,
+body.theme-light .typewriter-text,
+body.theme-light .typewriter span {
+  color: #181818 !important;
+  -webkit-text-fill-color: #181818 !important;
+  background: none !important;
 } 

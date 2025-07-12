@@ -311,7 +311,7 @@
   
   .pc-details h3 {
     font-weight: 600;
-    margin: 0;
+    margin: 0 0 10px 0;
     font-size: 2rem;
     background-image: linear-gradient(to bottom, #fff, #a259ff);
     background-size: 1em 1.5em;
@@ -496,3 +496,35 @@
       border-radius: 50px;
     }
   }
+
+body.theme-light .profile-card {
+  background: #fff;
+  color: #181818;
+  border: 1.5px solid #e3e9f7;
+  box-shadow: 0 4px 24px 0 #4facfe18;
+  border-radius: 18px;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+body.theme-light .profile-card h2,
+body.theme-light .profile-card h3,
+body.theme-light .profile-card h4 {
+  color: #181818;
+}
+body.theme-light .profile-card p {
+  color: #3a3a3a;
+}
+body.theme-light .profile-card .profile-card__subtitle {
+  color: #4facfe;
+}
+body.theme-light .profile-card,
+body.theme-light .profile-card h2,
+body.theme-light .profile-card h3,
+body.theme-light .profile-card h4,
+body.theme-light .profile-card p {
+  color: #181818 !important;
+}
+body.theme-light .pc-details p {
+  color: #181818 !important;
+  background: none !important;
+  -webkit-text-fill-color: #181818 !important;
+}

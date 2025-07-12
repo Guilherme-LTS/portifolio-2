@@ -1,3 +1,38 @@
+body {
+  font-family: 'Orbitron', 'Poppins', Arial, sans-serif;
+}
+
+body.theme-light .gooey-nav-container nav ul li a {
+  color: #181818 !important;
+}
+
+.gooey-nav-container .effect.text,
+.gooey-nav-container .effect.text.active {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  z-index: 1;
+  color: inherit;
+  font-family: 'Orbitron', 'Poppins', Arial, sans-serif;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-shadow: inherit;
+  background: none;
+}
+
+.gooey-nav-container .effect.text.active {
+  color: #181818 !important;
+  font-family: 'Orbitron', 'Poppins', Arial, sans-serif;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-shadow: inherit;
+  background: none;
+}
+
+
 :root {
     --linear-ease: linear(0, 0.068, 0.19 2.7%, 0.804 8.1%, 1.037, 1.199 13.2%, 1.245, 1.27 15.8%, 1.274, 1.272 17.4%, 1.249 19.1%, 0.996 28%, 0.949, 0.928 33.3%, 0.926, 0.933 36.8%, 1.001 45.6%, 1.013, 1.019 50.8%, 1.018 54.4%, 1 63.1%, 0.995 68%, 1.001 85%, 1);
   }
@@ -14,16 +49,17 @@
   
   .gooey-nav-container nav ul {
     display: flex;
-    flex-direction: column;   /* <-- ESSENCIAL para vertical */
-    gap: 1em;                 /* ajuste o espaçamento vertical */
+    flex-direction: column;   
+    gap: 1.5em;                 
     list-style: none;
-    padding: 0 0.5em;         /* padding lateral menor para sidebar */
+    padding: 0 0.5em;         
     margin: 0;
     position: relative;
     z-index: 3;
     color: white;
     text-shadow: 0 1px 1px hsl(205deg 30% 10% / 0.2);
     align-items: flex-start;
+    margin-top: 190px;
   }
   
   .gooey-nav-container nav ul li {
@@ -37,7 +73,42 @@
   
   .gooey-nav-container nav ul li a {
     display: inline-block;
-    padding: 0.6em 1em;
+    padding: 0.6em 1.5em;
+    font-family: 'Orbitron', 'Poppins', Arial, sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #eaf6ff;
+    text-decoration: none;
+    border-radius: 12px;
+    letter-spacing: 1px;
+    background: rgba(255,255,255,0.03);
+    box-shadow: 0 2px 8px 0 rgba(79,172,254,0.05);
+    transition: color 0.25s, background 0.25s, box-shadow 0.25s, transform 0.18s;
+  }
+
+  .gooey-nav-container nav ul li a:hover,
+  .gooey-nav-container nav ul li a:focus {
+    color: #fff;
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+    box-shadow: 0 4px 16px 0 rgba(79,172,254,0.18);
+    text-shadow: 0 2px 8px #00f2fe44;
+    outline: none;
+    transform: translateY(-2px) scale(1.04);
+  }
+
+  .gooey-nav-container nav ul li.active a {
+    color: #181818;
+    background: #fff;
+    box-shadow: 0 4px 24px 0 rgba(79,172,254,0.10);
+    text-shadow: none;
+    font-weight: 700;
+    border: 2px solid #4facfe;
+    transform: scale(1.08);
+    font-family: 'Orbitron', 'Poppins', Arial, sans-serif;
+  }
+
+  .gooey-nav-container nav ul li a:active {
+    transform: scale(0.98);
   }
   
   .gooey-nav-container nav ul li:focus-within:has(:focus-visible) {
@@ -82,10 +153,12 @@
   .gooey-nav-container .effect.text {
     color: white;
     transition: color 0.3s ease;
+    font-family: 'Orbitron', 'Poppins', Arial, sans-serif;
   }
   
   .gooey-nav-container .effect.text.active {
     color: black;
+    font-family: 'Orbitron', 'Poppins', Arial, sans-serif;
   }
   
   .gooey-nav-container .effect.filter {
