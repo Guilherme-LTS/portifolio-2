@@ -18,15 +18,16 @@ const GooeyNav = React.memo(({
   const textRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(initialActiveIndex);
 
-  const noise = (n = 1) => n / 2 - Math.random() * n;
+  const noise = useCallback((n = 1) => n / 2 - Math.random() * n, []);
 
-  const getXY = (distance, pointIndex, totalPoints) => {
+  const getXY = useCallback((distance, pointIndex, totalPoints) => {
     const angle =
       ((360 + noise(8)) / totalPoints) * pointIndex * (Math.PI / 180);
     return [distance * Math.cos(angle), distance * Math.sin(angle)];
-  };
+  }, [noise]);
 
-  const createParticle = (i, t, d, r) => {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const createParticle = useCallback((i, t, d, r) => {
     let rotate = noise(r / 10);
     return {
       start: getXY(d[0], particleCount - i, particleCount),
@@ -37,7 +38,7 @@ const GooeyNav = React.memo(({
       rotate:
         rotate > 0 ? (rotate + r / 20) * 10 : (rotate - r / 20) * 10,
     };
-  };
+  }, [colors, particleCount, noise, getXY]);
 
   const makeParticles = useCallback((element) => {
     const d = particleDistances;
@@ -81,7 +82,8 @@ const GooeyNav = React.memo(({
         }, t);
       }, 30);
     }
-  }, [animationTime, particleCount, particleDistances, particleR, timeVariance, colors]);
+    // eslint-disable-next-line
+  }, [animationTime, particleCount, particleDistances, particleR, timeVariance, createParticle]);
 
   const updateEffectPosition = useCallback((element) => {
     if (!containerRef.current || !filterRef.current || !textRef.current)

@@ -4,8 +4,7 @@ import './OQueFaco.css';
 const skillsDevelopment = [
   'HTML5', 'CSS3', 'JavaScript', 'Python', 'Django', 'React',
   'MySQL', 'VS Code', 'Figma', 'Node-RED', 'ESP32 (MQTT)',
-  'Kaggle', 'Scikit-learn', 'Docker', 'Postman',
-  'Google Tools', 'Pacote Office'
+  'Scikit-learn', 'Docker', 'Google Tools', 'Pacote Office'
 ];
 
 const skillsFullstack = [

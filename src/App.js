@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import ProfileCard from './components/ProfileCard';
 import Typewriter from './components/Typewriter';
 import OQueFaco from './components/OQueFaco';
+import ScrollVelocity from './components/ScrollVelocity';
 import './App.css';
 
 function App() {
@@ -38,6 +39,28 @@ function App() {
         </section>
         <section id="oquefaco">
           <OQueFaco />
+        </section>
+        <section id="softskills">
+          <h2 className="softskills-title">Soft Skills</h2>
+          <div className="scroll-velocity-card">
+            <ScrollVelocity
+              texts={[
+                'Proatividade', 'Organização', 'Boa Comunicação', 'Trabalho em Equipe', 'Adaptabilidade', 'Senso de Dono', 'Senso Crítico'
+              ]}
+              velocity={50}
+              className="custom-scroll-text"
+              numCopies={4}
+            />
+            <div style={{ height: 8 }} /> {/* Espaço entre as linhas animadas */}
+            <ScrollVelocity
+              texts={[
+                'Resiliência', 'Empatia', 'Gestão do Tempo', 'Pensamento Analítico', 'Curiosidade', 'Autonomia', 'Aprendizado Contínuo'
+              ]}
+              velocity={-50}
+              className="custom-scroll-text"
+              numCopies={4}
+            />
+          </div>
         </section>
         <section id="projetos">
           <h2>Projetos</h2>
