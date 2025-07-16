@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import ProfileCard from './components/ProfileCard';
 import Typewriter from './components/Typewriter';
+import OQueFaco from './components/OQueFaco';
 import './App.css';
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
             />
             <div className="home-text">  
               <div>
-                <Typewriter texts={['Full Stack?', 'No Code?', 'Low Code?']} />
+                <Typewriter texts={['Full Stack?', 'Frontend?', 'Backend?']} />
               </div>
               <p className="description-text-primary">
                 Pode contar comigo
@@ -35,8 +36,8 @@ function App() {
             </div>
           </div>
         </section>
-        <section id="sobre">
-          <h2>Sobre mim</h2>
+        <section id="oquefaco">
+          <OQueFaco />
         </section>
         <section id="projetos">
           <h2>Projetos</h2>
