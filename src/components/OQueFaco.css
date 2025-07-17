@@ -109,6 +109,20 @@
   color: #cacaca;
 }
 
+@media (max-width: 1200px) {
+  .oque-faco-card {
+    max-width: 90vw;
+    min-width: 320px;
+    padding: 20px 5vw 16px 5vw;
+  }
+  .oque-faco-card-titulo {
+    font-size: 1.3rem;
+  }
+  .oque-faco-card-desc {
+    font-size: 0.95rem;
+  }
+}
+
 @media (max-width: 900px) {
   .oque-faco-cards {
     flex-direction: column;
@@ -118,5 +132,19 @@
     max-width: 98vw;
     min-width: unset;
     padding: 24px 10vw 18px 10vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .oque-faco-card {
+    max-width: 98vw;
+    min-width: unset;
+    padding: 16px 2vw 12px 2vw;
+  }
+  .oque-faco-card-titulo {
+    font-size: 1.1rem;
+  }
+  .oque-faco-card-desc {
+    font-size: 0.9rem;
   }
 } 

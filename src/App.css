@@ -22,7 +22,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 230px;
+  gap: 200px;
   margin-top: 40px;
   margin-right: 190px;
 }
@@ -111,13 +111,32 @@ html {
   letter-spacing: 1px;
 }
 
-@media (max-width: 1920px) {
-  .home{
+.main-content {
+  margin-left: 280px; /* largura padrão da navbar */
+  transition: margin-left 0.3s;
+}
 
-  }
-  .home-content {
-    margin-right: 160px;
-    align-items: end;
-    justify-content: end;
+@media (max-width: 1920px) {
+  .main-content {
+    margin-left: 255px;
   }
 }
+
+@media (max-width: 1200px) {
+  .main-content {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    margin-left: 120px;
+  }
+}
+
+@media (max-width: 700px) {
+  .main-content {
+    margin-left: 60px;
+  }
+}
+

@@ -355,6 +355,38 @@
     }
   }
   
+  @media (max-width: 1200px) {
+    .pc-card-wrapper {
+      min-width: 260px;
+      max-width: 320px;
+    }
+    .pc-card {
+      max-height: 420px;
+    }
+    .pc-details h3 {
+      font-size: 1.1rem;
+    }
+    .pc-details p {
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .pc-card-wrapper {
+      min-width: 200px;
+      max-width: 260px;
+    }
+    .pc-card {
+      max-height: 340px;
+    }
+    .pc-details h3 {
+      font-size: 1rem;
+    }
+    .pc-details p {
+      font-size: 0.9rem;
+    }
+  }
+  
   @media (max-width: 768px) {
     .pc-card {
       height: 70svh;
