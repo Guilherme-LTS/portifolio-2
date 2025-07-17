@@ -45,7 +45,7 @@ function App() {
           <div className="scroll-velocity-card">
             <ScrollVelocity
               texts={[
-                'Proatividade', 'Organização', 'Boa Comunicação', 'Trabalho em Equipe', 'Adaptabilidade', 'Senso de Dono', 'Senso Crítico'
+                'Proatividade', 'Organização', 'Boa Comunicação', 'Trabalho em Equipe', 'Adaptabilidade', 'Senso de Dono', 'Senso Crítico', 'Scrum'
               ]}
               velocity={50}
               className="custom-scroll-text"
@@ -54,9 +54,9 @@ function App() {
             <div style={{ height: 8 }} /> {/* Espaço entre as linhas animadas */}
             <ScrollVelocity
               texts={[
-                'Resiliência', 'Empatia', 'Gestão do Tempo', 'Pensamento Analítico', 'Curiosidade', 'Autonomia', 'Aprendizado Contínuo'
+                'Resiliência', 'Empatia', 'Gestão do Tempo', 'Pensamento Analítico', 'Curiosidade', 'Autonomia', 'Aprendizado Contínuo', 'Kanban'
               ]}
-              velocity={-50}
+              velocity={-40}
               className="custom-scroll-text"
               numCopies={4}
             />
