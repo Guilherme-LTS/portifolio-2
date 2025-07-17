@@ -110,3 +110,14 @@ html {
   margin-top: 32px;
   letter-spacing: 1px;
 }
+
+@media (max-width: 1920px) {
+  .home{
+
+  }
+  .home-content {
+    margin-right: 160px;
+    align-items: end;
+    justify-content: end;
+  }
+}
