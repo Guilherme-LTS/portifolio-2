@@ -15,7 +15,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 320px;
+  width: 280px;
   height: 100%;
   background: var(--navbar-bg);
   border-right: 1px solid var(--navbar-border);
@@ -87,7 +87,7 @@
   font-family: 'Inter', 'Poppins', Arial, sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  letter-spacing: 0px;
   text-align: left;
 }
 
@@ -105,7 +105,7 @@
   font-family: 'Inter', 'Poppins', Arial, sans-serif;
   color: var(--navbar-text-secondary);
   font-weight: 200;
-  letter-spacing: 0.5px;
+  letter-spacing: 0px;
   transition: color 0.2s;
 }
 
@@ -169,6 +169,56 @@
 }
 .theme-icon {
   font-size: 1.5rem;
+}
+
+@media (max-width: 1920px) {
+  .navbar-col {
+    width: 255px;
+  }
+  .navbar-menu-col {
+    width: 240px;
+    gap: 0.6rem;
+    margin-bottom: 20px;
+  }
+  .logo-icon {
+    font-size: 1.7rem;
+  }
+  .navbar-menu-col a {
+    font-size: 0.9rem;
+    padding: 0.7rem 1rem;
+    font-weight: 100;
+  }
+  .menu-icon {
+    font-size: 0.9rem;
+    margin-right: 0.8rem;
+  }
+  .menu-label {
+    font-size: 0.9rem;
+    font-weight: 100;
+
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar-col {
+    width: 120px;
+    padding: 1rem 0 0.7rem 0;
+  }
+  .navbar-menu-col {
+    width: 120px;
+    margin-left: 0;
+  }
+  .logo-icon {
+    font-size: 1.1rem;
+  }
+  .navbar-menu-col a {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.3rem;
+  }
+  .menu-icon {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+  }
 }
 
 @media (max-width: 700px) {
