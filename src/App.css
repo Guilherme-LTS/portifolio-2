@@ -24,12 +24,9 @@ html {
   justify-content: center;
   gap: 200px;
   margin-top: 40px;
-  margin-right: 190px;
 }
 
-.home-content > * {
-  flex-shrink: 0;
-}
+
 
 .home-text {
   max-width: 440px;
