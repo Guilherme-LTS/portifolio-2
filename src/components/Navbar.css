@@ -1,13 +1,13 @@
 /* Variáveis CSS essenciais para navbar moderna */
 :root {
-  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00e6ff 100%);
-  --navbar-bg: #111018;
+  --primary-gradient: linear-gradient(135deg, #a259ff 0%, #c084fc 100%);
+  --accent-gradient: linear-gradient(135deg, #a259ff 0%, #c084fc 100%);
+  --navbar-bg: #1a1a2e;
   --navbar-text: #fff;
-  --navbar-text-secondary: #bfc4c9;
-  --navbar-border: #232323;
+  --navbar-text-secondary: #e0caff;
+  --navbar-border: #a259ff33;
   --navbar-radius: 18px;
-  --navbar-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+  --navbar-shadow: 0 2px 8px 0 #a259ff22;
   --navbar-purple: #a259ff;
 }
 
@@ -130,7 +130,7 @@
 
 .navbar-menu-col a:hover {
   color: var(--navbar-purple);
-  background: #191a1f;
+  background: #2d1a3a;
   border-radius: 10px;
 }
 
@@ -147,7 +147,7 @@
 .navbar-menu-col a:focus-visible .menu-icon,
 .navbar-menu-col a:focus-visible .menu-label {
   color: var(--navbar-purple);
-  background: #191a1f;
+  background: #2d1a3a;
 }
 
 .theme-toggle-btn-col {

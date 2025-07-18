@@ -24,17 +24,17 @@ h1, h2, h3, .text-rotate {
 
 body.theme-light {
   --background-main: #f7fafc;
-  --background-secondary: #e9f1fa;
+  --background-secondary: #ede6fa;
   --background-card: #fff;
-  --background-hover: #e0eafc;
+  --background-hover: #f3eaff;
   --text-main: #181818;
   --text-secondary: #3a3a3a;
   --text-muted: #7a7a7a;
-  --border-main: #dbeafe;
-  --border-strong: #4facfe;
-  --shadow-main: 0 4px 24px 0 #4facfe22;
-  --accent: #4facfe;
-  --accent-gradient: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  --border-main: #e0caff;
+  --border-strong: #a259ff;
+  --shadow-main: 0 4px 24px 0 #a259ff22;
+  --accent: #a259ff;
+  --accent-gradient: linear-gradient(90deg, #a259ff 0%, #c084fc 100%);
   background: var(--background-main);
   color: var(--text-main);
   transition: background 0.3s, color 0.3s;
@@ -46,7 +46,7 @@ body.theme-light a {
   transition: color 0.2s;
 }
 body.theme-light a:hover {
-  color: #00bfff;
+  color: #c084fc;
 }
 
 body.theme-light h1, body.theme-light h2, body.theme-light h3, body.theme-light h4, body.theme-light h5, body.theme-light h6,
@@ -59,7 +59,7 @@ body.theme-light .navbar-menu a {
 }
 
 body.theme-light .profile-card__subtitle {
-  color: #4facfe;
+  color: #a259ff;
 }
 
 body.theme-light .card, body.theme-light .project-card {
@@ -73,7 +73,7 @@ body.theme-light .card, body.theme-light .project-card {
 
 body.theme-light .card:hover, body.theme-light .project-card:hover {
   background: var(--background-hover);
-  box-shadow: 0 8px 32px 0 #4facfe33;
+  box-shadow: 0 8px 32px 0 #a259ff33;
 }
 
 body.theme-light button, body.theme-light .btn {
@@ -81,13 +81,13 @@ body.theme-light button, body.theme-light .btn {
   color: #fff;
   border: none;
   border-radius: 8px;
-  box-shadow: 0 2px 8px 0 #4facfe22;
+  box-shadow: 0 2px 8px 0 #a259ff22;
   transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 body.theme-light button:hover, body.theme-light .btn:hover {
-  background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
+  background: linear-gradient(90deg, #c084fc 0%, #a259ff 100%);
   color: #fff;
-  box-shadow: 0 4px 16px 0 #4facfe33;
+  box-shadow: 0 4px 16px 0 #a259ff33;
 }
 
 body.theme-light input, body.theme-light textarea, body.theme-light select {
@@ -110,4 +110,25 @@ body.theme-light hr {
 body.theme-light ::selection {
   background: #c2e9fb;
   color: var(--text-main);
+}
+
+/* Barra de rolagem para navegadores Webkit */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a259ff;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c084fc;
+}
+
+/* Barra de rolagem para Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #a259ff #1a1a2e;
 }
