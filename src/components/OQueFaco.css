@@ -1,7 +1,13 @@
 .oque-faco-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.oque-faco-div {
   padding: 70px 0 10px 0;
   color: #fff;
-  min-height: 60vh;
+  max-height: 100%;
 }
 
 .oque-faco-titulo {

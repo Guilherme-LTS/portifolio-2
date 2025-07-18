@@ -4,6 +4,7 @@ import ProfileCard from './components/ProfileCard';
 import Typewriter from './components/Typewriter';
 import OQueFaco from './components/OQueFaco';
 import ScrollVelocity from './components/ScrollVelocity';
+import Experiencia from './components/Experiencia';
 import './App.css';
 
 function App() {
@@ -62,8 +63,8 @@ function App() {
             />
           </div>
         </section>
-        <section id="projetos">
-          <h2>Projetos</h2>
+        <section id="experiencia">
+          <Experiencia />
         </section>
         <section id="contato">
           <h2>Contato</h2>

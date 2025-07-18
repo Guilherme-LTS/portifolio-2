@@ -1,0 +1,142 @@
+/* Seção principal */
+.experiencia-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 66px;
+
+}
+
+.experiencia-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #181818;
+  border-radius: 2rem;
+  padding: 0rem 2rem;
+  margin-bottom: 66px;
+  max-width: 1290px;
+  box-shadow: 0 0 40px #000a;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.titulo-experiencia {
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.cards-experiencia {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.card-experiencia {
+  background: #222;
+  border-radius: 1rem;
+  box-shadow: 0 0 0 1px #333, 0 4px 24px #0006;
+  padding: 1rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: box-shadow 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), border 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-experiencia.hover-effect:hover {
+  box-shadow: 0 0 32px 4px #a259ff, 0 0 0 2px #a259ff88, 0 4px 40px #a259ff44;
+}
+
+.card-experiencia h3 {
+  font-family: 'Orbitron', 'Poppins', Arial, sans-serif;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  transition: color 0.7s cubic-bezier(0.22, 1, 0.36, 1), text-shadow 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-experiencia.hover-effect:hover h3 {
+  color: #a259ff;
+  text-shadow: 0 0 0px #a259ff, 0 0 16px #a259ff;
+}
+
+.info-exp {
+  display: flex;
+  gap: 1.2rem;
+  color: #b5b5b5;
+  font-size: 1rem;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.empresa {
+  font-weight: 600;
+}
+
+.local, .periodo {
+  font-style: italic;
+  color: #b5b5b5;
+  font-size: 1rem;
+}
+
+.descricao {
+  color: #e0e0e0;
+  font-size: 1.08rem;
+  margin-bottom: 1.2rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+}
+
+.tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.badge-tec {
+  background: #181818;
+  color: #fff;
+  border-radius: 14px;
+  padding: 0.4rem 1.1rem;
+  font-size: 0.98rem;
+  font-weight: 500;
+  box-shadow: 0 0 8px #a259ff;
+  margin-bottom: 0.3rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+}
+
+/* background: #222;
+  color: #fff;
+  border-radius: 12px;
+  padding: 4px 14px;
+  font-size: 0.9rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  font-weight: 500;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10);
+  border: 1px solid #333;
+  margin-bottom: 4px;
+  transition: background 0.2s; */
+
+@media (max-width: 1920px) {
+  .experiencia-div {
+    max-width: 1136px;
+  }
+}
+
+@media (max-width: 800px) {
+  .experiencia-section {
+    padding: 1.5rem 0.5rem;
+  }
+  .cards-experiencia {
+    gap: 1.2rem;
+  }
+  .card-experiencia {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+  .titulo-experiencia {
+    font-size: 2rem;
+  }
+} 
