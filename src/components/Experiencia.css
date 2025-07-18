@@ -74,11 +74,10 @@
 }
 
 .empresa {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .local, .periodo {
-  font-style: italic;
   color: #b5b5b5;
   font-size: 1rem;
 }
@@ -123,6 +122,7 @@
 @media (max-width: 1920px) {
   .experiencia-div {
     max-width: 1136px;
+    height: 830px;
   }
 }
 
