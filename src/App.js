@@ -5,6 +5,7 @@ import Typewriter from './components/Typewriter';
 import OQueFaco from './components/OQueFaco';
 import ScrollVelocity from './components/ScrollVelocity';
 import Experiencia from './components/Experiencia';
+import Lanyard from './components/Lanyard';
 import './App.css';
 
 function App() {
@@ -68,6 +69,7 @@ function App() {
         </section>
         <section id="contato">
           <h2>Contato</h2>
+          <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
         </section>
       </main>
     </div>
