@@ -1,10 +1,13 @@
 /* eslint-disable react/no-unknown-property */
 'use client';
-import { useEffect, useRef, useState, useMemo } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Canvas, extend, useFrame } from '@react-three/fiber';
 import { useGLTF, useTexture, Environment, Lightformer } from '@react-three/drei';
 import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphericalJoint } from '@react-three/rapier';
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
+
+// replace with your own imports, see the usage snippet for details
+
 import * as THREE from 'three';
 import './Lanyard.css';
 
@@ -23,35 +26,21 @@ export default function Lanyard({ position = [0, 0, 30], gravity = [0, -40, 0], 
           <Band />
         </Physics>
         <Environment blur={0.75}>
-            <Lightformer intensity={2} color="white" position={[0, -1, 5]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
-            <Lightformer intensity={3} color="white" position={[-1, -1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
-            <Lightformer intensity={3} color="white" position={[1, 1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
-            <Lightformer intensity={10} color="white" position={[-10, 0, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[100, 10, 1]} />
+          <Lightformer intensity={2} color="white" position={[0, -1, 5]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
+          <Lightformer intensity={3} color="white" position={[-1, -1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
+          <Lightformer intensity={3} color="white" position={[1, 1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
+          <Lightformer intensity={10} color="white" position={[-10, 0, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[100, 10, 1]} />
         </Environment>
       </Canvas>
     </div>
   );
 }
-
 function Band({ maxSpeed = 50, minSpeed = 0 }) {
   const band = useRef(), fixed = useRef(), j1 = useRef(), j2 = useRef(), j3 = useRef(), card = useRef();
   const vec = new THREE.Vector3(), ang = new THREE.Vector3(), rot = new THREE.Vector3(), dir = new THREE.Vector3();
-  const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 10, linearDamping: 4 };
-
-  // Carrega o modelo 3D (para o clipe) e as texturas
-  const { nodes, materials } = useGLTF('/images/card.glb');
-  const strapTexture = useTexture('/images/lanyard.png');
-  const cardFaceTexture = useTexture('/images/cracha.png');
-  
-  // Configuração da textura
-  useEffect(() => {
-    if (cardFaceTexture) {
-      cardFaceTexture.flipY = false;
-      cardFaceTexture.colorSpace = THREE.SRGBColorSpace;
-      cardFaceTexture.needsUpdate = true;
-    }
-  }, [cardFaceTexture]);
-  
+  const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 4, linearDamping: 4 };
+  const { nodes, materials } = useGLTF("/images/scene.glb");
+  const texture = useTexture("/images/lanyard.png");
   const [curve] = useState(() => new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()]));
   const [dragged, drag] = useState(false);
   const [hovered, hover] = useState(false);
@@ -59,11 +48,10 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
     typeof window !== 'undefined' && window.innerWidth < 1024
   );
 
-  // Joints simplificados
-  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 0.8]);
-  useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 0.8]);
-  useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 0.8]);
-  useSphericalJoint(j3, card, [[0, 0, 0], [0, 1.1, 0]]);
+  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 1]);
+  useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 1]);
+  useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 1]);
+  useSphericalJoint(j3, card, [[0, 0, 0], [0, 1.50, 0]]);
 
   useEffect(() => {
     if (hovered) {
@@ -73,8 +61,12 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
   }, [hovered, dragged]);
 
   useEffect(() => {
-    const handleResize = () => setIsSmall(window.innerWidth < 1024);
+    const handleResize = () => {
+      setIsSmall(window.innerWidth < 1024);
+    };
+
     window.addEventListener('resize', handleResize);
+
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -97,16 +89,14 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
       curve.points[2].copy(j1.current.lerped);
       curve.points[3].copy(fixed.current.translation());
       band.current.geometry.setPoints(curve.getPoints(32));
-      
-      // Bloqueia rotações excessivas
-      if (card.current) {
-        card.current.setAngvel({ x: 0, y: 0, z: 0 });
-      }
+      ang.copy(card.current.angvel());
+      rot.copy(card.current.rotation());
+      card.current.setAngvel({ x: ang.x, y: ang.y - rot.y * 0.25, z: ang.z });
     }
   });
 
   curve.curveType = 'chordal';
-  strapTexture.wrapS = strapTexture.wrapT = THREE.RepeatWrapping;
+  texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
 
   return (
     <>
@@ -122,55 +112,22 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
           <BallCollider args={[0.1]} />
         </RigidBody>
         <RigidBody position={[2, 0, 0]} ref={card} {...segmentProps} type={dragged ? 'kinematicPosition' : 'dynamic'}>
-          <CuboidCollider args={[1.4 / 2, 2.2 / 2, 0.05]} />
+          <CuboidCollider args={[0.8, 1.125, 0.01]} />
           <group
-            position={[0, 0, 0]}
+            scale={2.25}
+            position={[0, -1.2, -0.05]}
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
-            onPointerUp={(e) => {
-              e.target.releasePointerCapture(e.pointerId);
-              drag(false);
-            }}
-            onPointerDown={(e) => {
-              e.target.setPointerCapture(e.pointerId);
-              drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation())));
-            }}>
-            
-            {/* Crachá com orientação correta */}
-            <mesh position={[0, 0, 0]} rotation={[0, 0, 0]}>
-              <planeGeometry args={[1.4, 2.2]} />
-              <meshPhysicalMaterial
-                map={cardFaceTexture}
-                map-anisotropy={16}
-                clearcoat={1}
-                clearcoatRoughness={0.15}
-                roughness={0.9}
-                metalness={0.8}
-                transparent={true}
-                alphaTest={0.1}
-                side={THREE.FrontSide}
-              />
+            onPointerUp={(e) => (e.target.releasePointerCapture(e.pointerId), drag(false))}
+            onPointerDown={(e) => (e.target.setPointerCapture(e.pointerId), drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation()))))}>
+            <mesh geometry={nodes.card.geometry}>
+              <meshPhysicalMaterial map={materials.base.map} map-anisotropy={16} clearcoat={1} clearcoatRoughness={0.15} roughness={0.9} metalness={0.8} />
             </mesh>
-            
-            {/* Gancho conectado corretamente */}
-            <mesh 
-              geometry={nodes.clip.geometry} 
-              material={materials.metal} 
-              position={[0, -0.4, 0]} 
-              scale={1.5}
-              rotation={[0, 0, 0]}
-            />
-            <mesh 
-              geometry={nodes.clamp.geometry} 
-              material={materials.metal} 
-              position={[0, -0.4, 0]} 
-              scale={1.5}
-              rotation={[0, 0, 0]}
-            />
+            <mesh geometry={nodes.clip.geometry} material={materials.metal} material-roughness={0.3} />
+            <mesh geometry={nodes.clamp.geometry} material={materials.metal} />
           </group>
         </RigidBody>
       </group>
-      
       <mesh ref={band}>
         <meshLineGeometry />
         <meshLineMaterial
@@ -178,7 +135,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
           depthTest={false}
           resolution={isSmall ? [1000, 2000] : [1000, 1000]}
           useMap
-          map={strapTexture}
+          map={texture}
           repeat={[-4, 1]}
           lineWidth={1}
         />
