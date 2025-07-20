@@ -6,6 +6,7 @@ import OQueFaco from './components/OQueFaco';
 import ScrollVelocity from './components/ScrollVelocity';
 import Experiencia from './components/Experiencia';
 import Lanyard from './components/Lanyard';
+import ContactSection from './components/ContactSection';
 import './App.css';
 
 function App() {
@@ -68,7 +69,7 @@ function App() {
           <Experiencia />
         </section>
         <section id="contato">
-          <h2>Contato</h2>
+          <ContactSection />
           <Lanyard position={[0, 0, 12]} gravity={[0, -40, 0]} />
         </section>
       </main>

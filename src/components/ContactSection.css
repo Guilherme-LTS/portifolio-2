@@ -1,0 +1,91 @@
+.contact-section {
+  background: #181818;
+  border-radius: 28px;
+  padding: 48px 32px 40px 32px;
+  max-width: 1100px;
+  margin: auto;
+  box-shadow: 0 2px 24px 0 rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.contact-title {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.contact-description {
+  color: #b0b0b0;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.contact-card {
+  background: #111;
+  border-radius: 12px;
+  padding: 36px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.12);
+  transition: transform 0.85s, box-shadow 0.85s;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow:
+    0 0 0 4px rgba(155, 4, 255, 0.25), /* brilho externo colorido */
+    0 4px 24px 0 rgba(155, 4, 255, 0.18); /* sombra mais suave */
+  border: 1px solid #9b04ff;
+}
+
+.contact-icon {
+  margin-bottom: 14px;
+}
+
+.contact-card-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.contact-card-value {
+  color: #b0b0b0;
+  font-size: 1rem;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  font-weight: 600;
+  font-family: 'Fira Mono', monospace;
+  font-size: 1rem;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  margin-top: 12px;
+  transition: background 0.18s, color 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12);
+}
+
+.contact-btn:hover {
+  background: #222;
+  color: #ffd700;
+} 
