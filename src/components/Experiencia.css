@@ -37,7 +37,7 @@
 }
 
 .card-experiencia {
-  background: #222;
+  background: #111018;
   border-radius: 1rem;
   box-shadow: 0 0 0 1px #333, 0 4px 24px #0006;
   padding: 1rem 2rem 2rem 2rem;
@@ -57,13 +57,24 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  transition: color 0.7s cubic-bezier(0.22, 1, 0.36, 1), text-shadow 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: color 1.7s cubic-bezier(0.22, 1, 0.36, 1), text-shadow 1.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .card-experiencia.hover-effect:hover h3 {
   color: #a259ff;
   text-shadow: 0 0 0px #a259ff, 0 0 16px #a259ff;
 }
+
+.card-experiencia .badge-tec {
+  transition: color 1.7s cubic-bezier(0.22, 1, 0.36, 1), 
+              box-shadow 1.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-experiencia.hover-effect:hover .badge-tec {
+  box-shadow: 0 0 8px #a259ff;
+  color: #a259ff; /* supondo que você quer mudar a cor também */
+}
+
 
 .info-exp {
   display: flex;
@@ -102,10 +113,11 @@
   padding: 0.4rem 1.1rem;
   font-size: 0.98rem;
   font-weight: 500;
-  box-shadow: 0 0 8px #a259ff;
+  box-shadow: 0 0 4px #ffffff;
   margin-bottom: 0.3rem;
   font-family: 'Fira Mono', 'Consolas', monospace;
 }
+
 
 /* background: #222;
   color: #fff;
