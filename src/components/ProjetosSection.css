@@ -35,7 +35,7 @@
 }
 
 .projeto-card {
-  background: var(--cor-bg-card);
+  background: #111018;
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(162,89,255,0.10);
   overflow: hidden;
@@ -46,15 +46,15 @@
   opacity: 0;
   transform: translateY(40px);
   animation: fadeInUp 0.8s forwards;
-  border: 1.5px solid rgba(162,89,255,0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.15); /* <= alterado aqui */
   min-height: 420px;
   position: relative;
 }
 
+
 .projeto-card:focus,
 .projeto-card:hover {
   box-shadow: 0 8px 32px rgba(162,89,255,0.22), 0 2px 8px rgba(0,0,0,0.10);
-  border-color: transparent;
   z-index: 2;
 }
 
