@@ -43,7 +43,6 @@
 .projeto-card:hover {
   transform: translateY(-10px) scale(1.025);
   box-shadow: 0 12px 40px rgba(0,212,255,0.18), 0 2px 8px rgba(0,0,0,0.10);
-  /* Remover borda azul */
   border-color: transparent;
   z-index: 2;
 }
@@ -176,7 +175,7 @@
   margin-bottom: 1.1rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.7em;
+  gap: 0.5em;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
 }
@@ -187,10 +186,10 @@
   justify-content: center;
   background: var(--cor-bg-badge);
   color: var(--cor-texto-badge);
-  font-size: 1.25rem;
-  height: 2.3em;
-  min-width: 2.3em;
-  border-radius: 1.2em;
+  font-size: 1.15rem;
+  height: 1.8em;
+  min-width: 1.3em;
+  border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.10);
   border: 1.5px solid #1a2a36;
   transition: background 0.2s, border 0.2s, color 0.2s, box-shadow 0.2s, min-width 0.32s cubic-bezier(.4,2,.6,1);
@@ -198,7 +197,6 @@
   cursor: pointer;
   overflow: hidden;
   padding: 0 0.5em 0 0.5em;
-  gap: 0.45em;
   outline: none;
   vertical-align: middle;
 }
@@ -213,8 +211,8 @@
   max-width: 0;
   margin-left: 0;
   color: #fff;
-  font-size: 1.08rem;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.9rem;
+  font-family: 'Fira Mono', 'Consolas', 'monospace';
   font-weight: 600;
   white-space: nowrap;
   transition: opacity 0.18s, max-width 0.32s cubic-bezier(.4,2,.6,1), color 0.2s, padding 0.2s;
@@ -304,33 +302,7 @@
   opacity: 1;
 }
 
-.projeto-links {
-  margin-top: auto;
-  display: flex;
-  gap: 1.1rem;
-}
 
-.projeto-link {
-  background: #2d8cff;
-  color: #fff;
-  padding: 0.48em 1.25em;
-  border-radius: 12px;
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 1.01rem;
-  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
-  box-shadow: 0 2px 8px rgba(45,140,255,0.10);
-  border: none;
-  outline: none;
-  display: inline-block;
-}
-
-.projeto-link:hover,
-.projeto-link:focus {
-  background: #1a5fb4;
-  color: #fff;
-  box-shadow: 0 4px 16px rgba(45,140,255,0.18);
-}
 
 /* Dark mode automático */
 @media (prefers-color-scheme: dark) {

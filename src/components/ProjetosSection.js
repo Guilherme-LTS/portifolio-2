@@ -83,10 +83,6 @@ const ProjetosSection = () => {
                   </span>
                 ))}
               </div>
-              <div className="projeto-links">
-                <a href={projeto.linkDemo} target="_blank" rel="noopener noreferrer" className="projeto-link">Demo</a>
-                <a href={projeto.linkRepo} target="_blank" rel="noopener noreferrer" className="projeto-link">Repositório</a>
-              </div>
             </div>
           </div>
         ))}
