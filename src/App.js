@@ -7,6 +7,7 @@ import ScrollVelocity from './components/ScrollVelocity';
 import Experiencia from './components/Experiencia';
 import Lanyard from './components/Lanyard';
 import ContactSection from './components/ContactSection';
+import ProjetosSection from './components/ProjetosSection';
 import './App.css';
 
 function App() {
@@ -67,6 +68,9 @@ function App() {
         </section>
         <section id="experiencia">
           <Experiencia />
+        </section>
+        <section id="projetos">
+          <ProjetosSection />
         </section>
         <section id="contato">
           <ContactSection />
