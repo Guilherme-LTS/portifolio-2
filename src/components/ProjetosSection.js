@@ -41,7 +41,7 @@ const projetos = [
     descricao: 'Sistema full-stack para digitalizar e automatizar o programa de pontos de um restaurante familiar. Permite cadastro e consulta de pontos por CPF, resgate de recompensas, notificações em tempo real e validação automática de clientes.',
     imagem: '/images/mockup-fidelidade1.png',
     tecnologias: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Vercel', 'Render', 'Supabase', 'react-toastify'],
-    funcao: 'Web Developer',
+    funcao: 'Full Stack Developer',
     linkDemo: '#',
     linkRepo: 'https://github.com/Guilherme-LTS/Sistema-de-Fidelidade',
   },
