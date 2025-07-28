@@ -22,11 +22,16 @@ function App() {
               title="Dev em Evolução e Empreendedor"
               handle="guilherme.lts"
               status="Online"
-              contactText="Contate me"
+              contactText="Contate-me"
               avatarUrl="https://avatars.githubusercontent.com/u/99211563?v=4"
               showUserInfo={true}
               enableTilt={true}
-              onContactClick={() => console.log('Contact clicked')}
+              onContactClick={() => {
+                const target = document.getElementById('contato');
+                if (target) {
+                  target.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               iconUrl="/images/iconpattern.png"
             />
             <div className="home-text">  
