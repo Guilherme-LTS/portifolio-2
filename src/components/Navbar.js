@@ -56,13 +56,13 @@ function Navbar() {
           </li>
         ))}
       </ul>
-      <button 
+      {/* <button 
         className={`theme-toggle-btn-col ${theme}`}
         onClick={toggleTheme}
         aria-label={theme === 'dark' ? 'Ativar tema claro' : 'Ativar tema escuro'}
       >
         {theme === 'dark' ? <FaRegMoon className="theme-icon" /> : <FaSun className="theme-icon" />}
-      </button>
+      </button> */}
     </nav>
   );
 }
