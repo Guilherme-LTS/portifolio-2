@@ -30,7 +30,7 @@ const projetos = [
   {
     titulo: "dApp de Votação na Blockchain Ethereum",
     descricao: "Uma Aplicação Descentralizada (dApp) para um sistema de votação que permite aos usuários conectar suas carteiras Ethereum, visualizar candidatos e registrar um voto único e imutável na rede de testes Sepolia, demonstrando os princípios de transparência, segurança e descentralização da tecnologia blockchain.",
-    imagem: "/images/card (2).glb",
+    imagem: "/images/mockup-dApp.png",
     tecnologias: ["React", "Ethers.js", "Solidity", "MetaMask", "Sepolia", "Node.js"],
     funcao: "Blockchain Developer",
     linkDemo: '#',
