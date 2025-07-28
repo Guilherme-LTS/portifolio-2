@@ -25,7 +25,7 @@ const contacts = [
   {
     icon: <FaInstagram size={40} />,
     title: 'Instagram',
-    value: '@yuyuhieix',
+    value: '@guilherme.lts',
     link: 'https://www.instagram.com/guilherme.lts/',
   },
 ];

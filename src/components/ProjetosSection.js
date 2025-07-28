@@ -2,7 +2,8 @@ import React from 'react';
 import './ProjetosSection.css';
 import { FaReact, FaNodeJs, FaCss3Alt } from 'react-icons/fa';
 import { SiTensorflow, SiVercel, SiSpring, SiNextdotjs } from 'react-icons/si';
-import { FaServer, FaDatabase, FaCloud } from 'react-icons/fa';
+import { FaServer, FaDatabase, FaCloud, FaEthereum, FaCode } from 'react-icons/fa';
+import { SiSolidity } from 'react-icons/si';
 import { FiExternalLink } from 'react-icons/fi';
 import { MdOutlineNotificationsActive } from 'react-icons/md';
 
@@ -19,35 +20,30 @@ const iconesTecnologia = {
   'Render': <FaCloud color="#00979c" title="Render" />,
   'Supabase': <FaCloud color="#3ecf8e" title="Supabase" />,
   'react-toastify': <MdOutlineNotificationsActive color="#ff9800" title="react-toastify" />,
+  'Ethers.js': <FaCode color="#4c51bf" title="Ethers.js" />,
+  'Solidity': <SiSolidity color="#363636" title="Solidity" />,
+  'MetaMask': <FaEthereum color="#e2761b" title="MetaMask" />,
+  'Sepolia': <FaEthereum color="#6c47ff" title="Sepolia (Ethereum Testnet)" />,
 };
 
 const projetos = [
   {
-    titulo: 'Haliya: The AI Fortune Teller',
-    descricao: 'Aplicação de previsão de sorte baseada em IA, usando machine learning para oferecer previsões personalizadas em diversas áreas.',
-    imagem: '/images/card (2).glb',
-    tecnologias: ['React', 'TensorFlow', 'Node.js', 'CSS'],
-    funcao: 'Web Developer',
+    titulo: "dApp de Votação na Blockchain Ethereum",
+    descricao: "Uma Aplicação Descentralizada (dApp) para um sistema de votação que permite aos usuários conectar suas carteiras Ethereum, visualizar candidatos e registrar um voto único e imutável na rede de testes Sepolia, demonstrando os princípios de transparência, segurança e descentralização da tecnologia blockchain.",
+    imagem: "/images/card (2).glb",
+    tecnologias: ["React", "Ethers.js", "Solidity", "MetaMask", "Sepolia", "Node.js"],
+    funcao: "Blockchain Developer",
     linkDemo: '#',
-    linkRepo: '#',
+    linkRepo: 'https://github.com/Guilherme-LTS/Trabalho-2-ODS-II---Dapp',
   },
   {
     titulo: 'Sistema de Fidelidade',
     descricao: 'Sistema full-stack para digitalizar e automatizar o programa de pontos de um restaurante familiar. Permite cadastro e consulta de pontos por CPF, resgate de recompensas, notificações em tempo real e validação automática de clientes.',
-    imagem: '/images/Design sem nome (2).svg',
+    imagem: '/images/mockup-fidelidade1.png',
     tecnologias: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Vercel', 'Render', 'Supabase', 'react-toastify'],
     funcao: 'Web Developer',
     linkDemo: '#',
-    linkRepo: '#',
-  },
-  {
-    titulo: 'GrievDesk',
-    descricao: 'Sistema de gestão de reclamações para organizações, facilitando o feedback e resolução de problemas.',
-    imagem: '/images/Design sem nome (9).png',
-    tecnologias: ['React', 'CSS', 'Spring Boot'],
-    funcao: 'Full Stack Developer',
-    linkDemo: '#',
-    linkRepo: '#',
+    linkRepo: 'https://github.com/Guilherme-LTS/Sistema-de-Fidelidade',
   },
 ];
 
