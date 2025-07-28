@@ -2,7 +2,9 @@ import React from 'react';
 import './ProjetosSection.css';
 import { FaReact, FaNodeJs, FaCss3Alt } from 'react-icons/fa';
 import { SiTensorflow, SiVercel, SiSpring, SiNextdotjs } from 'react-icons/si';
+import { FaServer, FaDatabase, FaCloud } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
+import { MdOutlineNotificationsActive } from 'react-icons/md';
 
 const iconesTecnologia = {
   'React': <FaReact color="#61dafb" title="React" />, 
@@ -12,6 +14,11 @@ const iconesTecnologia = {
   'Vercel': <SiVercel color="#fff" title="Vercel" />,
   'Spring Boot': <SiSpring color="#6db33f" title="Spring Boot" />,
   'Next.js': <SiNextdotjs color="#fff" title="Next.js" />,
+  'Express': <FaServer color="#000" title="Express" />,
+  'PostgreSQL': <FaDatabase color="#336791" title="PostgreSQL" />,
+  'Render': <FaCloud color="#00979c" title="Render" />,
+  'Supabase': <FaCloud color="#3ecf8e" title="Supabase" />,
+  'react-toastify': <MdOutlineNotificationsActive color="#ff9800" title="react-toastify" />,
 };
 
 const projetos = [
@@ -25,10 +32,10 @@ const projetos = [
     linkRepo: '#',
   },
   {
-    titulo: 'GDSC PLM Website',
-    descricao: 'Site oficial para o Google Developer Student Club na PLM, com projetos, eventos, blogs e engajamento da comunidade.',
+    titulo: 'Sistema de Fidelidade',
+    descricao: 'Sistema full-stack para digitalizar e automatizar o programa de pontos de um restaurante familiar. Permite cadastro e consulta de pontos por CPF, resgate de recompensas, notificações em tempo real e validação automática de clientes.',
     imagem: '/images/Design sem nome (2).svg',
-    tecnologias: ['Next.js', 'CSS', 'Vercel'],
+    tecnologias: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Vercel', 'Render', 'Supabase', 'react-toastify'],
     funcao: 'Web Developer',
     linkDemo: '#',
     linkRepo: '#',

@@ -10,8 +10,7 @@ const menuItems = [
   { label: 'Experiência', href: '#experiência', icon: <FiBriefcase /> },
   { label: 'Projetos', href: '#projetos', icon: <FiCode /> },
   { label: 'Certificações', href: '#certificações', icon: <PiCertificateLight /> },
-  { label: 'Hackathons', href: '#hackathons', icon: <FaTrophy /> },
-  { label: 'Contact', href: '#contact', icon: <FiPhone /> },
+  { label: 'Contato', href: '#contact', icon: <FiPhone /> },
 ];
 
 function Navbar() {

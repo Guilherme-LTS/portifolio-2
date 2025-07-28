@@ -1,32 +1,32 @@
 import React from 'react';
 import { MdEmail } from 'react-icons/md';
-import { FaLinkedinIn, FaGithub, FaTiktok } from 'react-icons/fa';
+import { FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa';
 import './ContactSection.css';
 
 const contacts = [
   {
     icon: <MdEmail size={40} />, 
     title: 'Email',
-    value: 'lumedalauvigne@gmail.com',
-    link: 'mailto:lumedalauvigne@gmail.com',
+    value: 'guilherme.lucas.ts@gmail.com',
+    link: 'mailto:guilherme.lucas.ts@gmail.com',
   },
   {
     icon: <FaLinkedinIn size={40} />,
     title: 'LinkedIn',
-    value: '@lavigne.lumeda',
-    link: 'https://www.linkedin.com/in/lavigne-lumeda/',
+    value: '@guilherme.lts',
+    link: 'https://www.linkedin.com/in/guilherme-lucas-teixeira-silva/',
   },
   {
     icon: <FaGithub size={40} />,
     title: 'GitHub',
-    value: '@yuyuhiei',
-    link: 'https://github.com/yuyuhiei',
+    value: '@Guilherme-LTS',
+    link: 'https://github.com/Guilherme-LTS',
   },
   {
-    icon: <FaTiktok size={40} />,
-    title: 'TikTok',
+    icon: <FaInstagram size={40} />,
+    title: 'Instagram',
     value: '@yuyuhieix',
-    link: 'https://www.tiktok.com/@yuyuhieix',
+    link: 'https://www.instagram.com/guilherme.lts/',
   },
 ];
 
