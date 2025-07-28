@@ -1,8 +1,9 @@
 .contact-section {
   background: #181818;
-  border-radius: 28px;
-  padding: 48px 32px 40px 32px;
-  max-width: 1100px;
+  border-radius: 2rem;
+  padding: 0.2rem 2rem;
+  margin-bottom: 30px;
+  max-width: 1136px;
   margin: auto;
   box-shadow: 0 2px 24px 0 rgba(0,0,0,0.2);
   text-align: center;

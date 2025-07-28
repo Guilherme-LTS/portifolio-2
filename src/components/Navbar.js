@@ -5,12 +5,12 @@ import { PiCertificateLight } from 'react-icons/pi';
 import './Navbar.css';
 
 const menuItems = [
-  { label: 'Sobre mim', href: '#sobre-mim', icon: <FiUser /> },
-  { label: 'O que eu faço', href: '#o-que-eu-faço', icon: <FiTool /> },
-  { label: 'Experiência', href: '#experiência', icon: <FiBriefcase /> },
+  { label: 'Sobre mim', href: '#home', icon: <FiUser /> },
+  { label: 'O que eu faço', href: '#oquefaco', icon: <FiTool /> },
+  { label: 'Soft Skills', href: '#softskills', icon: <FaTrophy /> },
+  { label: 'Experiência', href: '#experiencia', icon: <FiBriefcase /> },
   { label: 'Projetos', href: '#projetos', icon: <FiCode /> },
-  { label: 'Certificações', href: '#certificações', icon: <PiCertificateLight /> },
-  { label: 'Contato', href: '#contact', icon: <FiPhone /> },
+  { label: 'Contato', href: '#contato', icon: <FiPhone /> },
 ];
 
 function Navbar() {
@@ -39,7 +39,17 @@ function Navbar() {
       <ul className="navbar-menu-col">
         {menuItems.map((item) => (
           <li key={item.label}>
-            <a href={item.href} onMouseUp={e => e.currentTarget.blur()}>
+            <a
+              href={item.href}
+              onClick={e => {
+                e.preventDefault();
+                const target = document.querySelector(item.href);
+                if (target) {
+                  target.scrollIntoView({ behavior: 'smooth' });
+                }
+                e.currentTarget.blur();
+              }}
+            >
               <span className="menu-icon">{item.icon}</span>
               <span className="menu-label">{item.label}</span>
             </a>
