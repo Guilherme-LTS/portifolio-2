@@ -78,8 +78,8 @@ Sinta-se à vontade para abrir issues ou pull requests.
 
 ## 📫 Contato
 
-- [LinkedIn](https://www.linkedin.com/in/seu-usuario/)
-- Email: seu-email@exemplo.com
+- [LinkedIn](https://www.linkedin.com/in/guilherme-lucas-teixeira-silva/)
+- [Email]: (mailto:guilherme.lucas.ts@gmail.com)
 
 ---
 
