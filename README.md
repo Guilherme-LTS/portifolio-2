@@ -79,7 +79,7 @@ Sinta-se à vontade para abrir issues ou pull requests.
 ## 📫 Contato
 
 - [LinkedIn](https://www.linkedin.com/in/guilherme-lucas-teixeira-silva/)
-- [Email]: (mailto:guilherme.lucas.ts@gmail.com)
+- Email: guilherme.lucas.ts@gmail.com
 
 ---
 
