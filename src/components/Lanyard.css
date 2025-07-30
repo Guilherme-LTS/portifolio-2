@@ -9,3 +9,25 @@
     transform: scale(1);
     transform-origin: center;
   }
+
+
+  .chalk-text {
+    position: absolute;
+    top: 430px;
+    left: 840px;
+    font-family: 'Indie Flower', cursive;
+    color: #fff;
+    font-size: 2rem;
+    filter: blur(0.2px);
+    user-select: none;
+    transform: rotate(-5deg); /* leve inclinação para esquerda */
+    display: inline-block;
+  }
+  
+  .chalk-text::before {
+    content: "←"; /* seta para esquerda */
+    margin-right: 10px;
+    font-size: 2rem;
+    display: inline-block;
+    transform: rotate(10deg); /* deixa a seta também meio tortinha */
+  }
