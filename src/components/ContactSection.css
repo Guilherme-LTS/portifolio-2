@@ -2,9 +2,9 @@
   background: #181818;
   border-radius: 2rem;
   padding: 0.2rem 2rem;
-  margin-bottom: 30px;
   max-width: 1136px;
   margin: auto;
+  padding: 10px 32px 40px 32px;
   box-shadow: 0 2px 24px 0 rgba(0,0,0,0.2);
   text-align: center;
 }
@@ -29,7 +29,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
-  margin-bottom: 40px;
 }
 
 .contact-card {
